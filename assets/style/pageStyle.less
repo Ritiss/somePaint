@@ -1,0 +1,168 @@
+@font-face {
+	font-family: 'Inter';
+	src: local('Inter'),
+		url('../fonts/Inter-Regular.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: local('Inter'),
+		url('../fonts/Inter-SemiBold.ttf');
+	font-weight: 600;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	font-family: 'Inter', Courier, monospace;
+	font-weight: normal;
+
+	background: #3a304c;
+}
+
+.cont,
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cont {
+
+	.nav {
+		width: 20%;
+		height: 700px;
+		background: #4e485f;
+		color: #dadada;
+		user-select: none;
+
+		.block {
+			margin: 0 0 30px 0;
+
+			h2 {
+				margin-bottom: 15px;
+				font-size: 18px;
+				font-weight: 400;
+			}
+
+			li {
+				list-style: none;
+
+				span,
+				i {
+					margin: 0 0 15px 10px;
+				}
+
+				.option:active,
+				:hover {
+					color: black;
+					cursor: pointer;
+				}
+
+				i {
+					margin-right: 10px;
+				}
+			}
+
+
+			#size-slider {
+				height: 2px;
+				background: #dadada;
+
+				&::-moz-range-thumb {
+					width: 20px;
+					height: 20px;
+					border: 0;
+					background: #FFF;
+					cursor: pointer;
+				}
+			}
+
+			.active {
+				color: #1d1d1d;
+			}
+		}
+
+
+		.colors {
+
+			.list {
+				display: flex;
+				flex-direction: row;
+
+				.option {
+					width: 20px;
+					height: 20px;
+					margin-right: 10px;
+
+					&:nth-child(1) {
+						background-color: #FFFFFF;
+					}
+
+					&:nth-child(2) {
+						background-color: #000000;
+					}
+
+					&:nth-child(3) {
+						background-color: #2e8ddb;
+					}
+
+					&:nth-child(4) {
+						background-color: #c120cf;
+					}
+
+					#color-picker {
+						width: 20px;
+						height: 20px;
+						border: 1px solid #dadada;
+
+					}
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
+				.selected {
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.buttons button {
+			height: 30px;
+			width: 100px;
+			border: 0;
+			background: #ffffff;
+			text-align: center;
+			font-family: 'Inter', Courier, monospace;
+			font-size: 14px;
+			color: #525252;
+			transition: all 0.5s;
+
+			&:hover {
+				cursor: pointer;
+				background: #dadada;
+				color: #414141;
+			}
+
+			&:active {
+				background: #000000;
+			}
+		}
+	}
+
+	.canvas {
+		width: 80%;
+
+		canvas {
+			width: 100%;
+		}
+	}
+}
